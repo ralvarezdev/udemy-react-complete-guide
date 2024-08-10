@@ -1,1 +1,1 @@
-const transformToObjects = (numberArray) => numberArray.map(number=>({val:number}));
+const transformToObjects = (numberArray) => numberArray.map(number => ({val: number}));

@@ -1,4 +1,4 @@
-export default function Card({name, children}){
+export default function Card({name, children}) {
     return (
         <div className="card">
             <h2>{name}</h2>
@@ -6,5 +6,5 @@ export default function Card({name, children}){
                 {children}
             </div>
         </div>
-        )
+    )
 }

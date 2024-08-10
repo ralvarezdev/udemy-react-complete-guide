@@ -6,7 +6,7 @@ import React from 'react';
 export default function App() {
     const [price, setPrice] = React.useState(100)
 
-    const buttonOnClick = ()=>setPrice(75)
+    const buttonOnClick = () => setPrice(75)
 
     return (
         <div>

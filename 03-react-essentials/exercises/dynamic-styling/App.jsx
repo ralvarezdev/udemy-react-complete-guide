@@ -4,11 +4,11 @@ import React from 'react';
 export default function App() {
     const [wasClicked, setWasClicked] = React.useState()
 
-    const buttonOnClick=()=>setWasClicked(true)
+    const buttonOnClick = () => setWasClicked(true)
 
     return (
         <div>
-            <p className={wasClicked?"active":""}>Style me!</p>
+            <p className={wasClicked ? "active" : ""}>Style me!</p>
             <button onClick={buttonOnClick}>Toggle style</button>
         </div>
     );

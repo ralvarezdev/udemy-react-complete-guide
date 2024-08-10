@@ -11,9 +11,9 @@ export const DUMMY_TODOS = [
 
 // don't change the Component name "App"
 export default function App() {
-  return (
-      <ul>
-        {DUMMY_TODOS.map(todo=><Todo text={todo}/>)}
-      </ul>
-      )
+    return (
+        <ul>
+            {DUMMY_TODOS.map(todo => <Todo text={todo}/>)}
+        </ul>
+    )
 }

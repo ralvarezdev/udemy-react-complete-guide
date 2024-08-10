@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&family=Lato:wght@400;700&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Raleway', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: linear-gradient(#180d27, #0c0219);
+  color: #e5d9f1;
+  min-height: 100vh;
+}
+
+#feedback {
+  max-width: 30rem;
+  margin: 2rem auto;
+  padding: 1rem;
+  background-color: #669ae7;
+  color: #041023;
+  border-radius: 4px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
+}
+
+#feedback p {
+  margin: 0.5rem 0;
+}
+
+#feedback label {
+  display: block;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #364660;
+  font-size: 0.85rem;
+  margin: 0.25rem 0;
+}
+
+#feedback input,
+#feedback textarea {
+  font: inherit;
+  display: block;
+  margin: 0 0 1rem 0;
+  padding: 0.5rem;
+  width: 100%;
+  border-radius: 4px;
+  border: 1px solid #798aa9;
+  background-color: #b4c4e6;
+  color: #041023;
+}
+
+#draft {
+  font-family: 'Lato', sans-serif;
+  max-width: 30rem;
+  margin: 2rem auto;
+  padding: 1rem;
+  background-color: #67d7b0;
+  color: #0b3929;
+  border-radius: 4px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
+  text-align: center;
+}
+
+#draft figure {
+  margin: 0;
+  padding: 0;
+}
+
+#draft blockquote {
+  margin: 0 2rem;
+  padding: 0.5rem 1rem;
+  background-color: #65b69a;
+  border-radius: 4px;
+  color: #042217;
+  font-style: italic;
+}
+
+#draft blockquote p {
+  margin: 0;
+}
+
+#draft figcaption {
+  margin: 0.2rem 0;
+  font-size: 0.75rem;
+}
+
+#draft button {
+  margin: 1rem 0;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  border: none;
+  background-color: #0b3929;
+  color: #ecf8f4;
+  font-size: 1rem;
+  cursor: pointer;
+}

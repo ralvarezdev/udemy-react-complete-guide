@@ -1,9 +1,9 @@
 import "./Header.css"
 import reactImg from "../../assets/react-core-concepts.png";
 
-const reactDescriptions=["Fundamental", "Crucial", "Core"]
+const reactDescriptions = ["Fundamental", "Crucial", "Core"]
 
-function generateRandomInt(max){
+function generateRandomInt(max) {
     return Math.floor(Math.random() * max)
 }
 
@@ -12,7 +12,7 @@ function generateDescription() {
 }
 
 export default function Header() {
-    const description=generateDescription()
+    const description = generateDescription()
 
     return (
         <header>

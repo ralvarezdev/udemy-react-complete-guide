@@ -1,1 +1,1 @@
-const combine = (a,b,c) => a*b/c;
+const combine = (a, b, c) => a * b / c;
