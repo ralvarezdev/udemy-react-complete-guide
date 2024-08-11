@@ -2,7 +2,7 @@ import {SYMBOLS} from "../Players/Players.jsx";
 
 import "./Log.css"
 
-export default function Log({gameTurns}){
+export default function Log({gameTurns}) {
     return (
         <ol id="log">
             {gameTurns.map((gameTurn, index) => (

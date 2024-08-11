@@ -1,6 +1,6 @@
 import "./GameBoard.css"
 
-export default function GameBoard({playerOnClick, gameBoard, symbols}){
+export default function GameBoard({playerOnClick, gameBoard, symbols}) {
     return (
         <ol id="game-board">
             {gameBoard.map((row, rowIndex) => (
@@ -9,8 +9,8 @@ export default function GameBoard({playerOnClick, gameBoard, symbols}){
                         {row.map((playerIndex, columnIndex) => (
                             <li key={columnIndex}>
                                 <button
-                                    onClick={()=>playerOnClick(rowIndex, columnIndex)}
-                                    disabled={playerIndex!==null}>
+                                    onClick={() => playerOnClick(rowIndex, columnIndex)}
+                                    disabled={playerIndex !== null}>
                                     {symbols[playerIndex]}
                                 </button>
                             </li>

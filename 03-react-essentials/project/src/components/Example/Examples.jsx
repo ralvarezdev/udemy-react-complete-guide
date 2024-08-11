@@ -31,17 +31,17 @@ export default function Examples() {
         <Section id="examples" title="Examples">
             <Tabs
                 buttons={
-                <>
-                    {Object.keys(EXAMPLES).map(
-                        tabContent =>
-                            <TabButton
-                                key={EXAMPLES[tabContent].title}
-                                onClick={() => tabButtonOnClick(tabContent)}
-                                isActive={tabContent === tabContentActive}>
-                                {EXAMPLES[tabContent].title}
-                            </TabButton>
-                    )}
-                </>}>
+                    <>
+                        {Object.keys(EXAMPLES).map(
+                            tabContent =>
+                                <TabButton
+                                    key={EXAMPLES[tabContent].title}
+                                    onClick={() => tabButtonOnClick(tabContent)}
+                                    isActive={tabContent === tabContentActive}>
+                                    {EXAMPLES[tabContent].title}
+                                </TabButton>
+                        )}
+                    </>}>
                 {tabContent}
             </Tabs>
         </Section>
