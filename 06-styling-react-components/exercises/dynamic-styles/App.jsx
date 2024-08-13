@@ -4,13 +4,13 @@ import React from 'react';
 export default function App() {
     const [buttonClicked, setButtonClicked] = React.useState(false)
 
-    const pColor=buttonClicked?"red":"white"
+    const pColor = buttonClicked ? "red" : "white"
 
-    const buttonOnClick=()=>setButtonClicked(clicked=>!clicked)
+    const buttonOnClick = () => setButtonClicked(clicked => !clicked)
 
     return (
         <div>
-            <p style={{color:pColor}}>Style me!</p>
+            <p style={{color: pColor}}>Style me!</p>
             <button onClick={buttonOnClick}>Toggle style</button>
         </div>
     );
