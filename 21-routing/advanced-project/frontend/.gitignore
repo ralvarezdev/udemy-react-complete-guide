@@ -23,4 +23,5 @@ dist-ssr
 *.sln
 *.sw?
 
-*/user-places.json
+**/config.js
+**/events.json
