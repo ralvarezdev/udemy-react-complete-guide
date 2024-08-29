@@ -8,7 +8,7 @@ import * as fs from "node:fs";
 const db = sql('meals.db')
 
 export async function getMeals() {
-    await new Promise(resolve=>setTimeout(()=>resolve(), 2000))
+    await new Promise(resolve => setTimeout(() => resolve(), 2000))
 
     //throw new Error('Failed to fetch meals')
 
@@ -19,23 +19,23 @@ export async function getMeal(slug) {
     return db.prepare('SELECT * FROM meals WHERE slug = ?').get(slug)
 }
 
-export async function saveMeal(meal){
-    meal.slug=slugify(meal.title, {lower:true})
-    meal.instructions=xss(meal.instructions)
+export async function saveMeal(meal) {
+    meal.slug = slugify(meal.title, {lower: true})
+    meal.instructions = xss(meal.instructions)
 
     console.log(meal.image)
 
-    const extension=meal.image.name.split('.').pop()
-    const fileName=[meal.slug,extension].join('.')
+    const extension = meal.image.name.split('.').pop()
+    const fileName = [meal.slug, extension].join('.')
 
-    const writeStream=fs.createWriteStream(`public/images/${fileName}`)
-    const bufferedImage=await meal.image.arrayBuffer()
-    writeStream.write(Buffer.from(bufferedImage), error =>{
-        if(error)
+    const writeStream = fs.createWriteStream(`public/images/${fileName}`)
+    const bufferedImage = await meal.image.arrayBuffer()
+    writeStream.write(Buffer.from(bufferedImage), error => {
+        if (error)
             throw new Error('Failed to save image')
     })
 
-    meal.image=`/images/${fileName}`
+    meal.image = `/images/${fileName}`
 
     db.prepare(`
         INSERT INTO meals VALUES (

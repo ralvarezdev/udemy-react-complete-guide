@@ -4,10 +4,15 @@ import Link from "next/link";
 import Meals from "@/components/Meals/Meals";
 import FallbackMeals from "@/components/Fallback/FallbackMeals";
 
-export default async function MealsPage(){
+export const metadata = {
+    title: 'All Meals',
+    description: 'Browse the delicious meals shared by our vibrant community.',
+};
+
+export default async function MealsPage() {
     return (
         <>
-            <header  className={classes.header}>
+            <header className={classes.header}>
                 <h1>Delicious meals, created{' '}
                     <span className={classes.highlight}>by you</span>
                 </h1>

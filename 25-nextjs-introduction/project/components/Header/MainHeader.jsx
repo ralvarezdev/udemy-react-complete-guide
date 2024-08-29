@@ -10,25 +10,25 @@ import NavLink from "@/components/Nav/NavLink";
 export default function MainHeader() {
     return (<>
             <MainHeaderBackground/>
-        <header className={classes.header}>
-            <Link className={classes.logo} href="/">
-                <Image src={logoImg} alt="A plate with food on it" priority/>
-                NextLevel Food
-            </Link>
+            <header className={classes.header}>
+                <Link className={classes.logo} href="/">
+                    <Image src={logoImg} alt="A plate with food on it" priority/>
+                    NextLevel Food
+                </Link>
 
-            <nav className={classes.nav}>
-                <ul>
-                    {[["/meals", "Browse Meals"], ["/community", "Foodies Community"]].map(element=>{
-                        const [href, children]=element
-                        return (
-                            <li key={href}>
-                                <NavLink href={href}>{children}</NavLink>
-                            </li>
-                    )
-                    })}
-                </ul>
-            </nav>
-        </header>
+                <nav className={classes.nav}>
+                    <ul>
+                        {[["/meals", "Browse Meals"], ["/community", "Foodies Community"]].map(element => {
+                            const [href, children] = element
+                            return (
+                                <li key={href}>
+                                    <NavLink href={href}>{children}</NavLink>
+                                </li>
+                            )
+                        })}
+                    </ul>
+                </nav>
+            </header>
         </>
     )
 }

@@ -3,15 +3,24 @@ import Image from "next/image";
 import {getMeal} from "@/lib/meals";
 import {notFound} from "next/navigation";
 
-export default async function MealDetailsPage({params}){
-    const meal =await getMeal(params.mealSlug)
+export async function generateMetadata({params}) {
+    const meal = await getMeal(params.mealSlug)
 
     if (!meal)
         notFound()
 
-    meal.instructions= meal.instructions.replace(/\n/g, '<br>')
+    return {title: meal.title, description: meal.summary}
+}
 
-    return(
+export default async function MealDetailsPage({params}) {
+    const meal = await getMeal(params.mealSlug)
+
+    if (!meal)
+        notFound()
+
+    meal.instructions = meal.instructions.replace(/\n/g, '<br>')
+
+    return (
         <>
             <header className={classes.header}>
                 <div className={classes.image}>
@@ -24,7 +33,7 @@ export default async function MealDetailsPage({params}){
                 </div>
             </header>
             <main>
-                <p className={classes.instructions} dangerouslySetInnerHTML={{__html:meal.instructions}}></p>
+                <p className={classes.instructions} dangerouslySetInnerHTML={{__html: meal.instructions}}></p>
             </main>
         </>
     )
