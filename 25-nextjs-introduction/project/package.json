@@ -10,7 +10,7 @@
   },
   "dependencies": {
     "better-sqlite3": "^11.2.1",
-    "next": "^14.2.7",
+    "next": "^14.2.10",
     "react": "^0.0.0-experimental-a19a8ab4-20240829",
     "react-dom": "^0.0.0-experimental-a19a8ab4-20240829",
     "slugify": "^1.6.6",
